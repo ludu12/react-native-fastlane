@@ -12,16 +12,22 @@ npm install
 ```
 and then follow these cooresponding instructions for each platform.
 
-## Run instructions for iOS:
+### NOTE, install Cocoapods for iOS:
+```
+sudo gem install cocoapods
+```
+
+# Run instructions for iOS:
 - Run the following in root directory:
     ```
+    pod install --project-directory=ios
     npm run ios
     ```
 or
-- Open ios/fastlanedemo.xcodeproj in Xcode
+- Open ios/fastlanedemo.xcworkspace in Xcode
 - Hit the Run button (should start metro server for you)
 
-## Run instructions for Android:
+# Run instructions for Android:
 - Have an Android emulator running (quickest way to get started), or a device connected.
 - Run the following in root directory: 
     ```
