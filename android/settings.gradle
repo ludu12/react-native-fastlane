@@ -1,0 +1,3 @@
+rootProject.name = 'fastlanedemo'
+
+include ':app'
