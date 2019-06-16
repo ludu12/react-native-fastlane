@@ -2,18 +2,12 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, TouchableHighlight, NativeModules, Platform } from 'react-native';
 
 export default class App extends Component {
-
-
-  toastMessage(){
-    return 'Toast message from ' + Platform.OS;
-  }
-
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>Welcome to Fastlane Junto!</Text>
-        <TouchableHighlight style={styles.button} onPress={() => { NativeModules.ToastManager.toastMessage(this.toastMessage()); }}>
-          <Text style={{color: 'white'}}> Toast Message </Text>
+        <TouchableHighlight style={styles.button} onPress={() => { NativeModules.ToastManager.toastMessage('Toast message from ' + Platform.OS); }}>
+          <Text style={{ color: 'white' }}> Toast Message </Text>
         </TouchableHighlight>
       </View>
     );
